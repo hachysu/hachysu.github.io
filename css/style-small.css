@@ -120,11 +120,11 @@
 /* Layers */
 
 	#titleBar .toggle {
-		height: 4em;
-		width: 6em;
+		height: 44px;
+		width: 64px;
 	}
 
 		#titleBar .toggle:before {
 			font-size: 14px;
-			width: 44px;
+			width: 64px;
 		}
