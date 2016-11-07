@@ -1,0 +1,99 @@
+body,
+ul,
+li {
+	margin: 0;
+	padding: 0;
+	font: 14px/1.5 "微软雅黑";
+}
+
+ul,
+li {
+	list-style: none;
+}
+
+p {
+	/*border: 1px dashed black;*/
+	/*margin-left: 4px;*/
+	width: 4em;
+	padding: 0 4px;
+	border: 1px solid currentcolor;
+	font-size: large;
+	background-color: rgba(0,0,0,0.2);
+	cursor: default;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	transform: rotate(-15deg);
+	-moz-transform: rotate(-15deg);
+	-webkit-transform: rotate(-15deg);
+}
+
+.wrap {
+	background-color: lightgray;
+	/*background-color: #888888;*/
+	width: 852px;
+	height: 345px;
+	margin: 20px auto;
+	/*padding: 20px;*/
+}
+
+.hide,#tab_c {
+	display: none;
+}
+
+#tab_t {
+	height: 25px;
+}
+
+#tab_t li {
+	float: left;
+	width: 100px;
+	height: 24px;
+	line-height: 24px;
+	margin-right: 4px;
+	text-align: center;
+	border: 1px solid #666;
+	cursor: pointer;
+	/*background: #888;*/
+}
+
+
+/*#tab_t .act {
+	position: relative;
+	height: 25px;
+	margin-bottom: -1px;
+	background: #747;
+}*/
+
+#tab_t li:hover {
+	background-color: #999999;
+}
+
+#tab_c {
+	/*border-top: none;*/
+	/*visibility: hidden;*/
+	/*border: 3px double #777;*/
+	background-color: rgba(0, 0, 0, 0.1);
+	padding: 1em;
+	height: auto;
+	/*transition effect*/
+	/*transition: height 1s;
+	-webkit-transition: height 1s;
+	-moz-transition: height 1s;
+	-ms-transition: height 1s;*/
+}
+
+#tab_c a {
+	vertical-align: top;
+	color: darkmagenta;
+	text-decoration: none;
+	padding: 0 8px;
+	border-radius: 8px;
+	transition: padding 0.1s;
+	-webkit-transition: padding 0.1s;
+	-moz-transition: padding 0.1s;
+	-ms-transition: padding 0.1s;
+}
+
+#tab_c a:hover {
+	padding: 0 1em;
+}

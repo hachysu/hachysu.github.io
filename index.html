@@ -5,6 +5,9 @@
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
+		<link rel="icon" href="favicon.ico" type="image/x-icon" />
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+		<link rel="bookmark" href="favicon.ico" type="image/x-icon" />
 		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
 		<script src="js/jquery.min.js"></script>
 		<script src="js/jquery.scrollzer.min.js"></script>
@@ -18,35 +21,7 @@
 			<link rel="stylesheet" href="css/style-xlarge.css" />
 		</noscript>
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
-		<script type="text/javascript">
-		//获取浏览器页面可见高度和宽度
-        var _PageHeight = document.documentElement.clientHeight ||document.clientHeight,
-            _PageWidth = document.documentElement.clientWidth || document.clientWidth;
-
-        //计算loading框距离顶部和左部的距离（loading框的宽度为55px，高度为55px）
-        var _LoadingTop = _PageHeight > 30 ? (_PageHeight - 30) / 2 : 0,
-            _LoadingLeft = _PageWidth > 30 ? (_PageWidth - 30) / 2 : 0;
-
-        //在页面未加载完毕之前显示的内容
-        var _LoadingHtml = '<div id="loadingDiv" style="-moz-transition:0.5s ease;-webkit-transition:0.5s ease;-o-transition:0.5s ease;-ms-transition:0.5s ease;transition:0.5s ease;position:fixed;left:0;top:0;width:100%;height:100%;background:#000;opacity:1;filter:alpha(opacity=100);z-index:100;"><div style="position:relative;top:'+_LoadingTop+'px;margin:0 auto;cursor1:wait;width:30px;height:30px;background:#000 url(./content/spin.gif) no-repeat scroll;"></div></div>';
-        
-        //呈现loading效果
-        document.write(_LoadingHtml);
-
-        //监听加载状态改变
-        document.onreadystatechange = completeLoading;
- 
-        //加载完成时移除loading效果
-        function completeLoading() {
-            if (document.readyState == "complete") {
-                var loadingMask = document.getElementById('loadingDiv');
-                loadingMask.style.opacity = 0;
-                loadingMask.style.filter = 'alpha(opacity=0)';
-                loadingMask.style['z-index'] = -100;
-                //loadingMask.parentNode.removeChild(loadingMask);
-            }
-        }
-		</script>
+		<script src="js/mask.js"></script>
 	</head>
 	<body>
 		<div id="wrapper">
@@ -54,8 +29,8 @@
 			<!-- Header -->
 				<section id="header" class="skel-layers-fixed">
 					<header>
-						<span class="image avatar"><img src="images/avatar.jpg" ondragstart='return false;' alt="" /></span>
-						<h1 id="logo"><a href="#">赵若宸</a></h1>
+						<span class="image avatar"><img src="images/avatar.jpg" ondragstart="return false;" oncontextmenu="return false;" alt="" /></span>
+						<h1 id="logo"><a href="#one">赵若宸</a></h1>
 						<p>华南农业大学<br />
 						2013级 软件工程</p>
 					</header>
@@ -71,7 +46,7 @@
 						<ul class="icons">
 							<li><a href="https://twitter.com/Hachysu" class="icon fa-twitter" target="_blank"><span class="label">Twitter</span></a></li>
 							<li><a href="https://www.facebook.com/hachysu" class="icon fa-facebook" target="_blank"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="https://www.instagram.com/hachysu/" class="icon fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
 							<li><a href="https://github.com/hachysu" class="icon fa-github" target="_blank"><span class="label">Github</span></a></li>
 							<li><a href="mailto:573350194@qq.com" class="icon fa-envelope"><span class="label">Email</span></a></li>
 						</ul>
@@ -86,9 +61,9 @@
 							<div class="container">
 								<header class="major">
 									<h2>About Me</h2>
-									<p>Just an incredibly simple responsive site<br />
-									template freebie by <a href="http://html5up.net">HTML5 UP</a>.</p>
 								</header>
+								<strong>Thousand people see your thousand faces, which would you choose to live yourself today?</strong>
+								<p style="text-align: right;">by <i>Shakespeare</i></p>
 								<p>Faucibus sed lobortis aliquam lorem blandit. Lorem eu nunc metus col. Commodo id in arcu ante lorem ipsum sed accumsan erat praesent faucibus commodo ac mi lacus. Adipiscing mi ac commodo. Vis aliquet tortor ultricies non ante erat nunc integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum.</p>
 							</div>
 						</section>
@@ -96,48 +71,61 @@
 					<!-- Two -->
 						<section id="two">
 							<div class="container">
-								<h3>Things I Can Do</h3>
-								<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer lorem ipsum dolor sit amet.</p>
+								<h3>Things I Can Do</h3><br />
 								<ul class="feature-icons">
-									<li class="fa-code">Coding with HTML/CSS/JavaScript</li>
-									<li class="fa-cubes">Learning jQuery、PHP and so on</li>
+									<li class="fa-code">Coding with <strong>HTML</strong>/<strong>CSS</strong>/<strong>JavaScript</strong></li>
+									<li class="fa-cubes">Learning <strong>jQuery</strong>/<strong>PHP</strong> and so on</li>
 									<li class="fa-book">少打音游多读书</li>
 									<li class="fa-coffee">多喝热水</li>
-									<li class="fa-bolt">雷系法师</li>
+									<li class="fa-bolt">雷系魔法师（并不）</li>
 									<li class="fa-users">科学上网</li>
 								</ul>
+								<!--
+								<p>另外能熟练使用Photoshop、Lightroom处理图像，进行小型设计、修图等等操作。近期开始学习After Effect，目标学会简单的PV制作。<span style="text-decoration: line-through;">成为视频搬砖工。</span></p>
+								-->
 							</div>
 						</section>
-                        
-                        <div class="copyrights">Collect from <a href="http://www.cssmoban.com/" >企业网站模板</a></div>
 						
 					<!-- Three -->
 						<section id="three">
 							<div class="container">
-								<h3>A Few Accomplishments</h3>
-								<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer. Integer eu ante ornare amet commetus.</p>
+								<h3>Things I Did</h3>
+								<p>Yet among terms in the past three years, I have learnt several languages such as <strong>C/C++/Assembly Language/Java</strong> and programed some primordial trials with those once learned knowledge.<br />Actually I just have learnt Web-Developing for several months since last summer break. So I'm considering that there're still have many more things to learn.</p>
+								<p>The first trial I've made is a menu used at online shopping mall like Taobao/Tmall.</p>
+								<article>
+								<iframe width="100%" height="404" src="catalog/catalog.html"></iframe>
+								</article>
+								<p>And another work is this personal homepage :D, referencing some templates met my taste and modified from them I added some elements and functions in my preference.</p>
+								<hr />
+								<h3>Some Other Products</h3>
+								<p>As well as the main work <strong>Coding</strong>, music is my second hobby:). I make some music among spare time and do some research about <strong>Sound Design</strong> and <strong>Digital Signal Processing.</strong></p>
 								<div class="features">
 									<article>
-										<a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
+										<iframe class="sc" width="100%" height="150" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/286296439&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
 										<div class="inner">
-											<h4>Possibly broke spacetime</h4>
-											<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
+											<h4>Arasi (Original Mix)</h4>
+											<p>Compose/Arrange: Hachysu</p>
 										</div>
 									</article>
 									<article>
-										<a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
+										<iframe class="sc" width="100%" height="150" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/265214415&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
 										<div class="inner">
-											<h4>Terraformed a small moon</h4>
-											<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
+											<h4>Whitecard (Hachysu's Whiteologist Boom Mashup)</h4>
+											<p>Compose/Arrange: KSHMR</p>
+											<p>Vocal: Sidnie Tipton &amp; 平野綾</p>
+											<p>Mashup: Hachysu</p>
 										</div>
 									</article>
 									<article>
-										<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
+										<iframe class="sc" width="100%" height="150" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/260332428&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
 										<div class="inner">
-											<h4>Snapped dark matter in the wild</h4>
-											<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
+											<h4>Mermaid festa vol.1 (Hachysu's messy House Bootleg)</h4>
+											<p>Compose: 俊龍</p>
+											<p>Arrange: 渡辺和紀</p>
+											<p>Remix: Hachysu</p>
 										</div>
 									</article>
+									<p style="text-align: left;">and <a href="https://soundcloud.com/hachysu" target="_blank">more...</a></p>
 								</div>
 							</div>
 						</section>
@@ -147,7 +135,7 @@
 							<div class="container">
 								<h3>Contact Me</h3>
 								<p>&loz;&nbsp;QQ&nbsp;573350194<br/>&loz;&nbsp;&nbsp;℡&nbsp;&nbsp;156-2228-9172</p>
-								<form method="post" action="#">
+								<form method="post" action="mailto:573350194@qq.com">
 									<div class="row uniform">
 										<div class="6u 12u(3)"><input type="text" name="name" id="name" placeholder="Name" /></div>
 										<div class="6u 12u(3)"><input type="email" name="email" id="email" placeholder="Email" /></div>
